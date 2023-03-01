@@ -5,17 +5,19 @@
     --color-light-white: #ebebeb;
     --color-dark-white: #bdbdbd;
     --color-blue: #B6CDF6;
-    --color-azure: #7abbfc;
+    --color-azure: #a6c8ea;
     --color-royal-azure: #003fff;
     --color-dark-azure: #003399;
     --color-grey: #616161;
-    --color-light-grey: #7c7979;
+    --color-light-grey: #d4d2d2;
     --color-dark-grey: #4d4d4d;
     --color-light-orange: #fd9879;
     --color-orange: #fa6c41;
     --color-light-pink: #ff819c;
     --color-yellow: #fbe738;
     --color-black: #0a0909;
+    --color-dark-blue: #1f2eb7;
+    --color-mid-grey: #4e4e4e;
   
     /* Font size */
     --font-large: 45px;
@@ -79,7 +81,7 @@
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
-    margin: 8px 0;
+    margin: 24px 0 70px;
   }
   
   h3 {
@@ -93,8 +95,8 @@
     font-size: var(--font-regular);
     font-weight: var(--font-regular);
     color: var(--color-black);
-    margin: 4px 0;
-  }
+    margin: 24px 0 70px;
+}
 
   /* Navbar */
 #navbar {
@@ -152,7 +154,7 @@
   
   /* Home */
   #home {
-    background: url("imgs/home_background_2.png") center/cover no-repeat;
+    background: url("imgs/home_background_3.png") center/cover no-repeat;
     padding: 40px;
     padding-top: 120px;
     text-align: center;
@@ -175,7 +177,7 @@
     color:var(--color-white);
   }
   
-  .home_contact {
+  /* .home_contact {
     color: var(--color-white);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
@@ -187,7 +189,7 @@
   
   .home_contact:hover {
     background-color: var(--color-royal-azure);
-  }
+  } */
   
   /* Section common */
   .section {
@@ -202,7 +204,7 @@
   }
 
   /* Solution */
-  .solution_items {
+  .solution_majors {
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
@@ -214,8 +216,8 @@
     line-height: 170px;
     font-size: 70px;
     margin: auto;
-    color: var(--color-azure);
-    border: 1px solid var(--color-azure);
+    color: var(--color-dark-blue);
+    border: 1px solid var(--color-dark-blue);
     border-radius: 50%;
     margin-bottom: 16px;
   }
@@ -225,7 +227,7 @@
   }
   
   .solution_icon:hover i {
-    color: var(--color-royal-azure);
+    color: var(--color-azure);
     transform: rotate(-30deg) scale(1.1);
   }
   
@@ -237,3 +239,198 @@
   .solution_description {
     font-size: var(--font-small);
   }
+
+  /* Products */
+#products {
+  background-color: var(--color-blue);
+}
+
+.product_category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19%;
+  height: 400px;
+  margin: 5px;
+  background-color: var(--color-mid-grey);
+}
+
+.product_img {
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+
+.product_description {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.product:hover .product_description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.product_description h3 {
+  color: var(--color-white);
+}
+
+.product_description h3:after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+}
+
+/* * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0} */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "prev button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 28px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+/* .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+} */
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Footer */
+#nav-footer {
+  background-color: var(--color-light-grey);
+}
+
+.global-footer-grid {
+  box-sizing: border-box;
+  color: (--color-dark-grey);
+  color-scheme: light;
+  column-gap: 16px;
+  display: grid;
+  grid-template-areas: "logo nav1 nav2 nav3";
+  grid-template-columns:  260px 125.75px 125.75px 125.75px;
+  flex-direction: column;
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  list-style-image: none;
+  list-style-position: outside;
+}
+
+.footer-nav-list {
+  box-sizing: border-box;
+  color: (--color-dark-grey);
+  color-scheme: light;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  list-style-image: none;
+  list-style-position: outside;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
