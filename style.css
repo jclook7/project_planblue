@@ -112,7 +112,7 @@
   
   .navbar_logo_pb {
     position: relative;
-    vertical-align: top;
+    vertical-align: center;
     margin: 10px 0;
     height: 50px;
     max-height: 50px;
@@ -175,7 +175,7 @@
   
   /* Home */
   #home {
-    background: url("imgs/home_background_3.png") center/cover no-repeat;
+    background: url("imgs/cna_3.png") center/cover no-repeat;
     padding: 40px;
     padding-top: 120px;
     text-align: center;
@@ -403,21 +403,40 @@ img {vertical-align: middle;}
 /* Footer */
 #footer {
   background-color: var(--color-planblue);
-}
-
-.footer-gnb-top{
-  display: flex;
-}
-
-.footer-gnh-top-cols{
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-gnb-legal {
-  font-size: var(--font-small);
-  font-weight: var(--weight-bold);
   color: var(--color-white);
+}
+
+.footer-top {
+  display: flex;
+  margin:0 50px 0 30px;
+}
+
+.footer-top-logo {
+  margin: 0 200px 0 45px;
+}
+
+.footer-top-list{
+  display: flex;
+  margin: 0 45px 0 200px;
+}
+
+.footer-list-link {
+  font-size: 18px;
+  font-weight: var(--weight-semi-bold);
+}
+
+.footer-list-items {
+  font-size: 15px;
+  line-height: 22px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.footer-legal p {
+  font-size: var(--font-regular);
+  color: var(--color-white);
+  background-color: var(--color-planblue);
+  margin: 0;
 }
 
 /* On smaller screens, decrease text size */
