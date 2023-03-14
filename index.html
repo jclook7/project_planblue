@@ -11,50 +11,90 @@
     />
     <meta name="author" content="PlanBlue" />
     <link rel="icon" type="image/png" href="imgs/planblue_logo.png" />
-    <script
-    src="https://kit.fontawesome.com/9eb162ac0d.js"
-    crossorigin="anonymous"
-    ></script>
-    <link
+    <script 
+    src="https://kit.fontawesome.com/ee69e823e6.js" 
+    crossorigin="anonymous">
+    </script>
+     <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet"
-    />
+    rel="stylesheet"/>
     <link rel="stylesheet" href="style.css"/>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav id="navbar">
-        <div class="navbar_logo">
-          <img class="navbar_logo_pb" src="imgs/planblue_logo_1.png" alt="PlanBlue">
-        </div>
-        <ul class="navbar_menu">
-          <li class="navbar_menu_item" data-link="#home">Home</li>
-          <li class="navbar_menu_item" data-link="#product">RFID</li>
-          <li class="navbar_menu_item" data-link="#solution">PRODUCT</li>
-          <li class="navbar_menu_item" data-link="#business">SOLUTION</li>
-          <li class="navbar_menu_item" data-link="#company">Company</li>
-          <li class="navbar_menu_item" data-link="#contact">Contact</li>
-        </ul>
-    </nav>
+    <header id="navbar">
+      <div class="navbar_logo">
+        <img class="navbar_logo_pb" src="imgs/planblue_logo_1.png" alt="PlanBlue">
+      </div>   
+      <nav class="gnb">
+        <ul class="gnb-list">
+         <li class="gnb-list-item">
+           <a href="#" class="gnb-list-link" style="color: rgb(4, 159, 4)">HOME</a>
+           <ul class="gnb-depth2" style="display: none">
+           </ul>
+         </li>
+         <li class="gnb-list-item">
+          <a href="#" class="gnb-list-link">RFID</a>
+          <ul class="gnb-depth2">
+            <li class="gnb-depth2-item"><a href="#">RFID 이란</a></li>
+            <li class="gnb-depth2-item"><a href="#">RFID 솔루션</a></li>
+            <li class="gnb-depth2-item"><a href="#">RFID 장비</a></li>
+            <li class="gnb-depth2-item"><a href="#">RFID 태그</a></li>
+          </ul>
+        </li>            
+         <li class="gnb-list-item">
+           <a href="#" class="gnb-list-link">PRODUCT</a>
+           <ul class="gnb-depth2">
+             <li class="gnb-depth2-item"><a href="#">Device</a></li>
+             <li class="gnb-depth2-item"><a href="#">Censor</a></li>
+             <li class="gnb-depth2-item"><a href="#">Automation</a></li>
+             <li class="gnb-depth2-item"><a href="#">Accessories</a></li>
+           </ul>          
+         </li>
+         <li class="gnb-list-item">
+          <a href="#" class="gnb-list-link">SOLUTION</a>
+          <ul class="gnb-depth2">
+            <li class="gnb-depth2-item"><a href="#">WMS</a></li>
+            <li class="gnb-depth2-item"><a href="#">Picking</a></li>
+            <li class="gnb-depth2-item"><a href="#">Packing</a></li>
+            <li class="gnb-depth2-item"><a href="#">Delivery</a></li>
+            <li class="gnb-depth2-item"><a href="#">Document</a></li>
+          </ul>
+        </li>            
+        <li class="gnb-list-item">
+          <a href="#" class="gnb-list-link">COMPANY</a>
+          <ul class="gnb-depth2">
+            <li class="gnb-depth2-item"><a href="#">회사소개</a></li>
+            <li class="gnb-depth2-item"><a href="#">회사연혁</a></li>
+            <li class="gnb-depth2-item"><a href="#">찾아오시는 길</a></li>
+          </ul>          
+        </li>
+         <li class="gnb-list-item">
+          <a href="#" class="gnb-list-link">CONTACT</a>
+        </li>
+       </ul>
+     </nav>
 
+     <button type="button" class="hamburger">
+      <img src="imgs/hamburger-menu.svg" alt="hamburger menu">
+    </button>
+    </header>
+<!-- 
     <!-- Home -->
     <section id="home">
         <div class="home_container">
-            <div class="home_box">
+          <div class="home_box">
+          </div>
+            <div class="home_box1">
+              <h3 class="home_top_title">RFID/AUTOMATION TOTAL SOLUTION PARTNER</h3>
+              <h1 class="home_mid_title" style="font-size:32px;">RFID 솔루션 전문기업 플랜블루</h1>
+              <h2 class="home_description">World Best Business Parnter for </h2>
             </div>
-            <!-- <img
-              src="imgs/home_background_3.png"
-              alt="PlanBlue"
-              class="home_avatar"/>  -->
-            <h1 class="home_title">Welcome to PlanBlue</h1>
-            <h2 class="home_description">
-             World Best Business Partner and Solution Provider
-            </h2>
-            <!-- <button class="home_contact">Contact Me</button> -->
           </div>
     </section>
 
-    <!-- RFID -->
+    <!-- RFID Solutions-->
     <section id="solution" class="section section_container">
         <h1>RFID Solutions</h1>
         <p>
@@ -64,7 +104,7 @@
         <div class="solution_majors">
           <div class="solution">
             <div class="solution_icon">
-              <i class="fab fa-html5"></i>
+              <i class="fa-solid fa-industry"></i>
             </div>
             <div class="solution_title">자재/생산관리</div>
             <p class="solution_description">
@@ -74,7 +114,7 @@
           </div>
           <div class="solution">
             <div class="solution_icon">
-              <i class="fas fa-mobile"></i>
+              <i class="fa-solid fa-file-contract"></i>
             </div>
             <div class="solution_title">문서관리</div>
             <p class="solution_description">
@@ -84,7 +124,7 @@
           </div>
           <div class="solution">
             <div class="solution_icon">
-              <i class="fas fa-server"></i>
+              <i class="fa-solid fa-file-shield"></i>
             </div>
             <div class="solution_title">산업안전관리</div>
             <p class="solution_description">
@@ -94,7 +134,7 @@
           </div>
           <div class="solution">
             <div class="solution_icon">
-              <i class="fab fa-html5"></i>
+              <i class="fa-solid fa-user-shield"></i>
             </div>
             <div class="solution_title">보안관리</div>
             <p class="solution_description">
@@ -104,7 +144,7 @@
           </div>
           <div class="solution">
             <div class="solution_icon">
-              <i class="fab fa-html5"></i>
+              <i class="fa-solid fa-warehouse"></i>
             </div>
             <div class="solution_title">물류관리</div>
             <p class="solution_description">
@@ -166,92 +206,78 @@
       </div>
     </section>
 
-    <!-- Solutions -->
-    <section id="business" class="section">
+    <!-- Solution Projects -->
+    <section id="project" class="section">
       <div>
-        <h1>Solutions</h1>
+        <h1>Projects</h1>
        </div>
 <!-- Slideshow container -->
       <div class="slideshow-container">
 <!-- Slideshow images -->
-        <div class="mySlides fade">
-          <img src="imgs/canva_1.png" style="width:100%">
+        <div class="myProjects fade">
+          <img src="imgs/cna_1.png" style="width:100%">
         </div>
-        <div class="mySlides fade">
-          <img src="imgs/canva_2.png" style="width:100%">
+        <div class="myProjects fade">
+          <img src="imgs/cna_2.png" style="width:100%">
         </div>      
-        <div class="mySlides fade">
-          <img src="imgs/canva_3.png" style="width:100%">
+        <div class="myProjects fade">
+          <img src="imgs/cna_3.png" style="width:100%">
         </div>
-        <div class="mySlides fade">
-          <img src="imgs/canva_4.png" style="width:100%">
+        <div class="myProjects fade">
+          <img src="imgs/cna_4.png" style="width:100%">
         </div>
-        <div class="mySlides fade">
-          <img src="imgs/canva_5.png" style="width:100%">
+        <div class="myProjects fade">
+          <img src="imgs/cna_5.png" style="width:100%">
         </div>
 <!--Next & Previous buttons  -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 <!-- The dots/circles -->
-        <div class="slider_dots" style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
+        <div class="slider_bars" style="text-align:center">
+          <span class="bar" onclick="currentSlide(1)"></span>
+          <span class="bar" onclick="currentSlide(2)"></span>
+          <span class="bar" onclick="currentSlide(3)"></span>
+          <span class="bar" onclick="currentSlide(4)"></span>
+          <span class="bar" onclick="currentSlide(5)"></span>
         </div>
       </div> 
      </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-    </section>
-
     <!-- Footer -->
-    <footer id="footer" class="section" >
-     <div class="footer_gb_nav_container">
-          <div class="footer_gb_nav_logo">
-            <a href="" class="bp-footer-logo" aria-label="PlanBlue homepage"></a>
-            <p>Your Solution Partner</p>
-          </div>
-          <div class="footer_gb_nav_cols">
-            <div class="footer_gb_nav_col_1">
-              <h2 class="footer_gb_nav_col_list">Company</h2>
-              <ul class="footer_gb_nav_items">
-                <li class="footer_nav_item">1</li>
-                <li class="footer_nav_item">2</li>
-                <li class="footer_nav_item">3</li>
-              </ul>
-            </div>
-            <div class="footer_gb_nav_col_2">
-              <h2 class="footer_gb_nav_col_list">Support</h2>
-              <ul class="footer_gb_nav_items">
-                <li class="footer_nav_item">4</li>
-                <li class="footer_nav_item">5</li>
-                <li class="footer_nav_item">6</li>
-              </ul>
-            </div>
-            <div class="footer_gb_nav_col_3">
-              <h2 class="footer_gb_nav_col_list">Contact</h2>
-              <ul class="footer_gb_nav_items">
-                <li class="footer_nav_item">7</li>
-                <li class="footer_nav_item">8</li>
-                <li class="footer_nav_item">9</li>
-              </ul>
-            </div>
-          </div>
-     </div>
-     <div class="footer_gb_info">
-        <div class="footer_gb_bp">
-            <a href="" class="footer-bp-logo-link" target="_blank" rel="noopener noreferrer"></a> 
+    <footer id="footer" class="section">
+      <div class="footer-gnb-top">
+        <div class="footer-gnb-top-logo">
+          <a href="" class="bp-footer-logo" aria-label="PlanBlue homepage"></a>
         </div>
-        <div class="footer_gb_legal">
-            <strong class="company">PlanBlue</strong><br>
-            <i class="left">© 2023 All right Reserved</i>    
+        <div class="footer-gnb-top-cols">
+          <div class="footer-gnb-top-col1">
+            <h2 class="footer_gb_nav_col_list">Company</h2>
+            <ul class="footer_gb_nav_items">
+              <li class="footer_nav_item">1</li>
+              <li class="footer_nav_item">2</li>
+            </ul>
+          </div>
+          <div class="footer-gb_nav_col_2">
+            <h2 class="footer_gb_nav_col_list">Support</h2>
+            <ul class="footer_gb_nav_items">
+              <li class="footer_nav_item">4</li>
+              <li class="footer_nav_item">5</li>
+            </ul>
+          </div>
+          <div class="footer_gb_nav_col_3">
+            <h2 class="footer_gb_nav_col_list">Contact</h2>
+            <ul class="footer_gb_nav_items">
+              <li class="footer_nav_item">7</li>
+            </ul>
+          </div>
         </div>
-     </div>
+   </div>
+   <div class="footer-gnb-bottom">
+      <div class="footer-gnb-legal">
+          <p>© 2023. PLANBLUE. all rights reserved.</p>    
+      </div>
+   </div>
     </footer>
 
-<script src="main.js"></script>
 </body>
 </html>

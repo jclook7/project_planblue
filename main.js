@@ -1,5 +1,20 @@
 'use strict';
 
+let gnbListLink = document.querySelectorAll('.gnb-list-link');
+let gnbDepth2 = document.querySelectorAll('.gnb-depth2');
+let gnb = document.querySelector('.gnb');
+let gnbListItem = document.querySelectorAll('.gnb-list-item')
+
+for (let i = 0; i < gnbListLink.length; i++) {
+  gnbListLink[i].addEventListener('mouseenter', function () {
+    gnbDepth2[i].classList.add('active');
+  });
+
+  gnbListItem[i].addEventListener('mouseleave', function () {
+    gnbDepth2[i].classList.remove('active');
+  });
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -15,18 +30,18 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("myProjects");
+  let bars = document.getElementsByClassName("bar");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < bars.length; i++) {
+    bars[i].className = bars[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  bars[slideIndex-1].className += " active";
 }
 
 let slideIndexA = 0;
@@ -34,19 +49,19 @@ showSlidesA();
 
 function showSlidesA() {
   let p;
-  let slidesp = document.getElementsByClassName("mySlides");
-  let dotsp = document.getElementsByClassName("dot");
+  let slidesp = document.getElementsByClassName("myProjects");
+  let barsp = document.getElementsByClassName("bar");
 
   for (p = 0; p < slidesp.length; p++) {
     slidesp[p].style.display = "none";
   }
-  for (p = 0; p < dotsp.length; p++) {
-    dotsp[p].className = dotsp[p].className.replace(" active", "");
+  for (p = 0; p < barsp.length; p++) {
+    barsp[p].className = barsp[p].className.replace(" active", "");
   }
   slideIndexA++;
   if (slideIndexA > slidesp.length) {slideIndexA = 1}
   slidesp[slideIndexA-1].style.display = "block";
-  dotsp[slideIndexA-1].className += " active";
+  barsp[slideIndexA-1].className += " active";
   setTimeout(showSlidesA, 5000); // Change image every 5 seconds
 }
 
