@@ -1,17 +1,17 @@
 'use strict';
 
 let gnbListLink = document.querySelectorAll('.gnb-list-link');
-let gnbDepth2 = document.querySelectorAll('.gnb-depth2');
+let gnbLevel2 = document.querySelectorAll('.gnb-level2');
 let gnb = document.querySelector('.gnb');
 let gnbListItem = document.querySelectorAll('.gnb-list-item')
 
 for (let i = 0; i < gnbListLink.length; i++) {
   gnbListLink[i].addEventListener('mouseenter', function () {
-    gnbDepth2[i].classList.add('active');
+    gnbLevel2[i].classList.add('active');
   });
 
   gnbListItem[i].addEventListener('mouseleave', function () {
-    gnbDepth2[i].classList.remove('active');
+    gnbLevel2[i].classList.remove('active');
   });
 }
 
@@ -64,4 +64,23 @@ function showSlidesA() {
   barsp[slideIndexA-1].className += " active";
   setTimeout(showSlidesA, 5000); // Change image every 5 seconds
 }
+
+let mybtn = document.getElementById("myBtn"); 
+window.onscroll = function () {
+ scrollFunction();
+}; 
+
+function scrollFunction() {
+ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybtn.style.display = "block";
+ } else {
+  mybtn.style.display = "none";
+ }
+} 
+
+function topFunction() {
+ document.body.scrollTop = 0; 
+ document.documentElement.scrollTop = 0; 
+}
+
 
