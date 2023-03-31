@@ -1,5 +1,6 @@
 'use strict';
 
+// home - slideshow
 let gnbListLink = document.querySelectorAll('.gnb-list-link');
 let gnbLevel2 = document.querySelectorAll('.gnb-level2');
 let gnb = document.querySelector('.gnb');
@@ -15,34 +16,34 @@ for (let i = 0; i < gnbListLink.length; i++) {
   });
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("myProjects");
-  let bars = document.getElementsByClassName("bar");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < bars.length; i++) {
-    bars[i].className = bars[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  bars[slideIndex-1].className += " active";
-}
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("myProjects");
+//   let bars = document.getElementsByClassName("bar");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < bars.length; i++) {
+//     bars[i].className = bars[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   bars[slideIndex-1].className += " active";
+// }
 
 let slideIndexA = 0;
 showSlidesA();
@@ -62,9 +63,40 @@ function showSlidesA() {
   if (slideIndexA > slidesp.length) {slideIndexA = 1}
   slidesp[slideIndexA-1].style.display = "block";
   barsp[slideIndexA-1].className += " active";
-  setTimeout(showSlidesA, 5000); // Change image every 5 seconds
+  setTimeout(showSlidesA, 3000); // Change image every 5 seconds
 }
 
+// 일정 시간마다 반복 실행 => window.setInterval(함수, 시간)
+// 일정 시간이후 한번 실행 => window.setTimeout(함수, 시간)
+// 시간 : millisecond = 1/1000 second
+
+let mainSloganItem = document.querySelectorAll('.main-slogan-item');
+
+let current = 0;
+let next = 1;
+let prev = 2;
+
+window.setInterval(function () {
+  
+  if(next >= mainSloganItem.length){
+    next = 0;
+  }
+
+  mainSloganItem[current].classList.remove('current','next','prev');
+  mainSloganItem[next].classList.remove('current','next','prev');
+  mainSloganItem[prev].classList.remove('current','next','prev');
+
+  mainSloganItem[current].classList.add('current');
+  mainSloganItem[next].classList.add('next');
+  mainSloganItem[prev].classList.add('prev');
+
+  prev = current;
+  current = next;
+  next = next + 1;
+
+}, 3000);
+
+// scroll button
 let mybtn = document.getElementById("myBtn"); 
 window.onscroll = function () {
  scrollFunction();

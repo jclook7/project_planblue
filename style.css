@@ -19,11 +19,14 @@
     --color-planblue-gn: #249c17;
   
     /* Font size */
-    --font-large: 45px;
-    --font-medium: 25px;
+    --font-large: 40px;
+    --font-mid-medium: 25px;
+    --font-medium: 23px;
+    --font-mid-regular: 20px;
     --font-regular: 17px;
     --font-small: 15px;
     --font-micro: 13px;
+    --font-mini: 11px
   
     /* Font weight */
     --weight-bold: 700;
@@ -44,6 +47,8 @@
   
   body {
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
   }
   
@@ -91,10 +96,10 @@
   }
   
   p {
-    font-size: var(--font-regular);
+    font-size: var(--font-mid-regular);
     font-weight: var(--font-regular);
     color: var(--color-black);
-    margin: 24px 0 70px;
+    margin: 20px 0 40px;
 }
 
   /* Navbar */
@@ -212,7 +217,7 @@
   /* RFID Solution */
   .solution_majors {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 80px 0 20px;
     padding: 20px 0;
   }
@@ -249,7 +254,7 @@
   }
   
 
-  /* Products */
+  /* Industries */
 #products {
   background-color: var(--color-light-grey);
 }
@@ -312,11 +317,6 @@
   background-color: var(--color-dark-white);
 }
 
-#projects {
-  margin: 0;
-  padding: 0;
-}
-
 /* * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0} */
 .mySolutions {display: none}
@@ -325,47 +325,23 @@ img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
   overflow: hidden;
-  max-width: 100%;
-  height: 700px;
+  max-width: 75%;
+  height: auto;
   position: relative;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  transition: .6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.slideshow-wrapper{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0 40px 0;
 }
 
-/* Position the "prev button" to the right */
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 /* The dots/bullets/indicators */
-
 .slider_bars {
   position: absolute;
   bottom: 15px;
@@ -374,16 +350,17 @@ img {vertical-align: middle;}
   width: 60%;
   padding-left: 0;
   margin-left: -30%;
+  margin-top: 20px;
   text-align: center;
   list-style: none;
 }
 
 .bar {
   cursor: pointer;
-  height: 4px;
+  height: 5px;
   width: 35px;
   margin: 0 2px;
-  background-color: var(--color-white);
+  background-color: rgb(169, 167, 167);
   border-radius: 0;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -391,7 +368,7 @@ img {vertical-align: middle;}
 }
 
 .active, .bar:hover {
-  background-color: var(--color-royal-azure);
+  background-color: var(--color-grey);
 }
 
 /* Fading animation */
@@ -405,10 +382,6 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-/* News */
-/* #news {
-  background-color: var(--color-deep-blue);
-} */
 
 /* Footer */
 #footer {
@@ -470,14 +443,16 @@ img {vertical-align: middle;}
 
 /* Scroll */
 #myBtn {
+  display: inline-block;
   position: fixed; 
   bottom: 50px; 
   right: 50px;
   width: 70px;
   height: 70px;
-  font-size: 50px;
-  border: none;
-  outline: none;
+  font-size: 60px;
+  padding: 0;
+  /* border: none;
+  outline: none; */
   z-index: 99;
   background-color: var(--color-black);
   color:var(--color-white); 
@@ -488,6 +463,325 @@ img {vertical-align: middle;}
 #myBtn:hover {
   background-color: var(--color-planblue-gn);
 }
+
+/* product.html style */
+
+.category_section {
+  display: flex;
+  position: relative;
+}
+
+.cat_column_container {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+}
+
+.cat_column_container-left {
+  width: 50%;
+  float: left;
+  margin-left: 120px;
+}
+
+.cat_column_container-right {
+  width: 50%;
+  float: right;
+  margin-right:120px;
+}
+
+.cat_column_inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 100%;
+  margin: 10px;
+}
+
+.cat_product_rep_img {
+  width: 400px;
+  height: auto;
+  align-self: center;
+}
+
+.cat_wrapper {
+  max-width: 500px;
+}
+
+.cat_wrapper h3 {
+  color: var(--color-planblue-gn);
+  margin: 10px 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cat_wrapper h2 {
+  color: var(--color-planblue);
+  margin: 10px 0 10px;
+  font-weight: var(--weight-bold);
+}
+
+.p1 {
+  margin: 20px 0 30px;
+  text-align: left;
+}
+
+.button_btn1-container {
+  display: block;
+  height: 50px;
+  text-align: center;
+}
+
+.button_btn1-container a {
+  background-color: var(--color-planblue-gn);
+  color: var(--color-white);
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+  font-weight: var(--weight-bold);
+  padding: 10px 20px;
+  height: 50px;
+}
+
+.product_rep_img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.product-description {
+  display: flex;
+  background-color: var(--color-dark-grey);
+  color: var(--color-black);
+  height: 400px;
+}
+
+.sub-product {
+  display: flex;
+  background-color: var(--color-dark-grey);
+  color: var(--color-black);
+  height: 400px;
+}
+
+/* Solution page Style*/
+.main-slogan{
+  height:270px;
+  background:#011c41;
+  box-sizing:border-box;
+  position:relative;
+}
+
+.main-slogan-item{
+  position:absolute;
+  top: 0;
+  left: 0; /* dissolve 효과 적용시 위치 고정 */
+  width: 100%; /* absolute를 사용하면 기본 속성이 제거됨 => 100% 사용해야 함 */
+  height: 100%; /* absolute를 사용하면 height에 % 적용 가능 */
+  padding-top:50px;
+}
+
+.main-slogan-item.current{
+  /* left: 0; dissolve 효과 적용시 사용 안함 */
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.main-slogan-item.next{
+  /* left: 100%;  dissolve 효과 적용시 사용 안함 */
+  opacity: 0;
+}
+
+.main-slogan-item.prev{
+  /* left: -100%;  dissolve 효과 적용시 사용 안함 */
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.section-heading {
+  font-size:38px;
+  color:#ffffff;
+  font-weight:600;
+  text-align:center;
+  margin: 20px 0;
+}
+
+.section-paragraph{
+  width:500px;
+  text-align:center;
+  margin:auto; /* margin:0 auto */
+  font-size:15px;
+  color: var(--color-white);
+}
+
+.mt20{
+  margin-top:20px;
+}
+
+#sub_solutions {
+  background-color: var(--color-light-white);
+}
+
+.sub_solutions {
+  margin: 40px 30px;
+}
+
+.sub_solution {
+  display: flex;
+  margin: 32px 0;
+}
+
+.sub_solution_image {
+  max-width: 300px;
+  height: auto;
+}
+
+.sub_solution_image:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.sub_solution_image:nth-child(even) {
+  margin-left: 30px;
+}
+
+.sub_solution_content-intro {
+  padding: 18px;
+  background-color: var(--color-white);
+}
+
+.sub_solution_content-intro .description{
+  text-align: left;
+}
+
+.sub_solution_content-intro p {
+  color: var(--color-dark-grey);
+  margin: 20px 0 ;
+  font-size: 17px;
+}
+
+.sub_solution_content-intro h3 {
+  color: var(--color-planblue);
+  margin: 20px 0 30px;
+  font-weight: var(--weight-bold);
+}
+
+.sub_solution_content-intro a {
+  color: var(--color-pink);
+}
+
+/* Product page style */
+#sub_products {
+  background-color: var(--color-light-white);
+}
+
+.sub_products {
+  margin: 40px 30px;
+}
+
+.sub_product {
+  display: flex;
+  margin: 32px 0;
+}
+
+.sub_product_image {
+  max-width: 300px;
+  height: auto;
+  margin-right: 30px;
+}
+
+.sub_product_content-intro {
+  font-size: 30px;
+  padding: 18px;
+  background-color: var(--color-white);
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.sub_product_content-intro .description{
+  text-align: left;
+}
+
+.sub_product_content-intro p {
+  color: var(--color-dark-grey);
+  margin: 20px 0 ;
+  font-size: 17px;
+}
+
+.sub_product_content-intro h3 {
+  color: var(--color-planblue);
+  margin: 20px 0 30px;
+  font-weight: var(--weight-bold);
+}
+
+.sub_product_content-intro a {
+  color: var(--color-pink);
+}
+
+/* RFID page style */
+#rfid_category {
+  background-color: var(--color-light-white);
+}
+
+.rfid_category-title p {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 40px 0 10px;
+}
+
+.rfid_row_inner {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 ;
+  padding: 20px 0;
+}
+
+.rfid_column_container {
+  background-color: var(--color-white);
+  width: 350px;
+  padding: 0 30px;
+}
+
+.rfid_item-top {
+  margin: 20px 0;
+}
+
+.rfid_item-h2 {
+  color: var(--color-planblue-gn);
+  margin: 30px 0;
+}
+
+.rfid_item-image {
+  display: flex;
+  height: 150px;
+  border: 1px solid var(--color-dark-white);
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rfid_item-image img {
+  max-width: 150px;
+  height: auto;
+}
+
+.rfid_item-bottom {
+  margin: 20px 0;
+}
+
+.rfid-item-h3 {
+  font-size: large;
+  font-weight: var(--weight-bold);
+}
+
+.rfid-item p{
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
