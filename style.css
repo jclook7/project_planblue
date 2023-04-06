@@ -100,7 +100,37 @@
     font-weight: var(--font-regular);
     color: var(--color-black);
     margin: 20px 0 40px;
-}
+  }
+
+  hr {
+    border-bottom: 1px solid gray;
+    text-align: center;
+   }
+
+   .hr2 {
+    border-top: 3px solid #249c17;
+    text-align: center;
+   }
+
+  .h3_title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .p2 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px 0;
+  }
+
+  .vl {
+    border-left: 6px solid green;
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+  }
 
   /* Navbar */
 #navbar {
@@ -251,8 +281,7 @@
   .solution_description {
     color: var(--color-black);
     font-size: var(--font-small);
-  }
-  
+  }  
 
   /* Industries */
 #products {
@@ -262,7 +291,8 @@
 .product_category {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 1200px;
 }
 
 .product {
@@ -270,15 +300,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 390px;
+  width: 280px;
   height: 100%;
   margin: 5px;
 }
 
 .product_img {
-  max-width: 100%;
-  max-height: 100%;
-  align-self: center;
+  max-width: 280px;
+  height: 230px;
+  background-color: var(--color-white);
+  margin: auto;
 }
 
 .product_description {
@@ -340,7 +371,6 @@ img {vertical-align: middle;}
   margin: 10px 0 40px 0;
 }
 
-
 /* The dots/bullets/indicators */
 .slider_bars {
   position: absolute;
@@ -382,6 +412,56 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
+/* Information */
+#information {
+  background-color: var(--color-light-grey);
+}
+
+.information {
+  display: flex;
+  max-width: 1120px;
+  margin: 20px;
+}
+
+.information_column_inner {
+  display:flex;
+  justify-content:space-between;
+  box-sizing: border-box;
+  height: auto;
+  margin: 0 50px;
+  padding: 10px 30px;
+  background-color: var(--color-white);
+  text-align: left;
+  position: relative;
+  width: 50%;
+  z-index: 20;
+}
+
+.information_wrapper {
+  max-width: 300px;
+}
+
+.button_btn2-container {
+  display: block;
+  height: 50px;
+  position: relative;
+}
+
+.button_btn2-container a {
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+  background-color: var(--color-planblue);
+  color: var(--color-white);
+  text-transform: uppercase;
+  border: none;
+  position: absolute;
+  font-weight: var(--weight-bold);
+  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Footer */
 #footer {
@@ -466,15 +546,20 @@ img {vertical-align: middle;}
 
 /* product.html style */
 
+#category_intro {
+  margin: 0;
+}
+
 .category_section {
   display: flex;
   position: relative;
+  padding: 0;
 }
 
 .cat_column_container {
   display: flex;
   width: 100%;
-  margin: 20px;
+  margin: 0 20px;
 }
 
 .cat_column_container-left {
@@ -500,7 +585,7 @@ img {vertical-align: middle;}
 }
 
 .cat_product_rep_img {
-  width: 400px;
+  max-width: 500px;
   height: auto;
   align-self: center;
 }
@@ -545,8 +630,8 @@ img {vertical-align: middle;}
 }
 
 .product_rep_img {
+  max-width: 300px;
   height: auto;
-  max-width: 100%;
   vertical-align: top;
 }
 
@@ -565,9 +650,9 @@ img {vertical-align: middle;}
 }
 
 /* Solution page Style*/
-.main-slogan{
+.main-slogan {
   height:270px;
-  background:#011c41;
+  background: #011c41;
   box-sizing:border-box;
   position:relative;
 }
@@ -670,6 +755,50 @@ img {vertical-align: middle;}
 }
 
 /* Product page style */
+#product_industry {
+  background:#d9d9d9;
+  position: relative;
+}
+
+.industries {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 80px 0 20px;
+  padding: 20px 0;
+}
+
+.industry {
+  background-color: var(--color-white);
+  width: 160px;
+  height: auto;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.industry_icon {
+  width: 120px;
+  height: 120px;
+  line-height: 100px;
+  font-size: 50px;
+  margin: auto;
+  color: var(--color-white);
+  background-color: var(--color-planblue);
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.industry_title {
+  font-size: var(--font-regular);
+  font-weight: 600;
+  color: var(--color-planblue-gn);
+}
+.industry_description {
+  color: var(--color-black);
+  font-size: var(--font-small);
+}
+
 #sub_products {
   background-color: var(--color-light-white);
 }
@@ -725,6 +854,11 @@ img {vertical-align: middle;}
   background-color: var(--color-light-white);
 }
 
+.rfid_category-container {
+  width: 100%;
+  margin: 10px 0 30px;
+}
+
 .rfid_category-title p {
   font-size: 25px;
   font-weight: 700;
@@ -755,7 +889,7 @@ img {vertical-align: middle;}
 
 .rfid_item-image {
   display: flex;
-  height: 150px;
+  height: 160px;
   border: 1px solid var(--color-dark-white);
   border-radius: 20px;
   justify-content: center;
@@ -763,7 +897,7 @@ img {vertical-align: middle;}
 }
 
 .rfid_item-image img {
-  max-width: 150px;
+  max-width: 160px;
   height: auto;
 }
 
